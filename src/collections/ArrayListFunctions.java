@@ -1,4 +1,4 @@
-package ArrayList;
+package collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,6 @@ public class ArrayListFunctions {
 		boolean quit = false;
 		int choice = 0;
 
-		// TODO Auto-generated method stub
 		ArrayList<String> list = createArrayList();
 		printInstructions();
 		while (!quit) {
@@ -103,7 +102,6 @@ public class ArrayListFunctions {
 	// iterate all elements
 
 	public static void iterateArrayList(ArrayList<String> list) {
-		createArrayList();
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i));
 		}
@@ -161,18 +159,7 @@ public class ArrayListFunctions {
 
 	// copy one array list into another
 	public static void copyArrayList(ArrayList<String> list) {
-		ArrayList<String> newList = new ArrayList<String>();
-		newList.add("A");
-		newList.add("B");
-		newList.add("C");
-		newList.add("D");
-		newList.add("E");
-		newList.add("F");
-		newList.add("G");
-
-		System.out.println("\nCurrent ColorList B : " + "\n" + list);
-
-		Collections.copy(newList, list);
+		ArrayList<String> newList = new ArrayList<String>(list);
 
 		System.out.println("\nUpdated ColorList : " + "\n" + newList);
 	}
@@ -194,16 +181,5 @@ public class ArrayListFunctions {
 		ArrayList<String> sub_List = (ArrayList<String>) list.subList(0, 3);
 		System.out.println("List of first three elements: " + sub_List);
 	}
-
-	// compare two array lists
-	/*
-	 * public static void compareTwoArray(ArrayList<String> list1) {
-	 * 
-	 * ArrayList<String> list2 = new ArrayList<String>(); list2.add("Blue");
-	 * list2.add("Blue"); list2.add("Green"); list2.add("Violet");
-	 * list2.add("Yellow"); list2.add("Orange");
-	 * 
-	 * }
-	 */
 
 }
